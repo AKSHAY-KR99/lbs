@@ -11,7 +11,7 @@ app.autodiscover_tasks()
 app.conf.beat_schedule = {
     'check-expired-enrollments-midnight': {
         'task': 'lbs.tasks.check_expired_enrollments',
-        'schedule': crontab(minute='*/2')
+        'schedule': crontab(minute=0, hour=0)
 
     },
 }
